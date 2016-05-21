@@ -18,11 +18,11 @@ class Stroke: NSObject {
 	
 	private(set) var points: WCMFloatVector
 	
-	private init(points: WCMFloatVector, width: Float, color: UIColor, stride: Int32, ts: Float, tf: Float, blendMode: WCMBlendMode) {
+	init(points: WCMFloatVector, andStride stride: Int32, andWidth width: Float, andColor color: UIColor, andTs ts: Float, andTf tf: Float, andBlendMode blendMode: WCMBlendMode) {
 		
+		self.stride = stride
 		self.width = width
 		self.color = color
-		self.stride = stride
 		self.ts = ts
 		self.tf = tf
 		self.blendMode = blendMode
@@ -31,10 +31,6 @@ class Stroke: NSObject {
 		
 		super.init()
 		
-	}
-	
-	static func strokeWithPoints(points: WCMFloatVector, andStride stride: Int32, andWidth width: Float, andColor color: UIColor, andTs ts: Float, andTf tf: Float, andBlendMode blendMode: WCMBlendMode) -> Stroke {
-		return Stroke(points: points, width: width, color: color, stride: stride, ts: ts, tf: tf, blendMode: blendMode)
 	}
 	
 }
