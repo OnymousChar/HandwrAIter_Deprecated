@@ -115,7 +115,7 @@ extension DrawView {
 	}
 	
 	private func processTouches(touches: Set<UITouch>?, withEvent event: UIEvent?) {
-		guard let touches = touches, touch = NSSet(set: touches).anyObject() as? UITouch else {
+		guard let touch = touches?.first else {
 			return
 		}
 		
