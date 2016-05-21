@@ -13,8 +13,6 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		let view = DrawView(frame: self.view.bounds)
-		self.view.addSubview(view)
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -22,6 +20,10 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 	
+	override func viewDidAppear(animated: Bool) {
+		let controller = RootViewController()
+		self.presentViewController(controller, animated: false, completion: nil)
+	}
 	
 }
 
