@@ -29,6 +29,38 @@ class RootViewController: UIViewController {
 		
 		return drawView
 	}()
+	
+	private lazy var toolbar: UIView = {
+		let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+		let viewFrame = CGRect(x: 0, y: statusBarHeight + self.titleLabel.frame.height + self.willDrawView.frame.height, width: self.view.frame.width, height: 40)
+		let view = UIView(frame: viewFrame)
+		return view
+	}()
+	
+	private lazy var resetButton: CallbackButton = {
+		let buttonSize = CGSize(width: self.toolbar.frame.width / 2, height: self.toolbar.frame.height)
+		let buttonOrigin = CGPoint.zero
+		let button = CallbackButton(frame: CGRect(origin: buttonOrigin, size: buttonSize))
+		button.setTitle("リセット", forState: .Normal)
+		button.setTitleColor(.blackColor(), forState: .Normal)
+		button.setOnTapAction {
+			self.resetStrokes()
+		}
+		return button
+	}()
+	
+	private lazy var submitButton: CallbackButton = {
+		let buttonSize = CGSize(width: self.toolbar.frame.width / 2, height: self.toolbar.frame.height)
+		let buttonOrigin = CGPoint(x: self.toolbar.frame.width - buttonSize.width, y: 0)
+		let button = CallbackButton(frame: CGRect(origin: buttonOrigin, size: buttonSize))
+		button.setTitle("決定", forState: .Normal)
+		button.setTitleColor(.blackColor(), forState: .Normal)
+		button.setOnTapAction {
+			self.outputStrokes()
+			self.resetStrokes()
+		}
+		return button
+	}()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -49,9 +81,20 @@ class RootViewController: UIViewController {
 			self.view.addSubview(view)
 		}
 		
-		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 10)), dispatch_get_main_queue()) {
-			self.willDrawView.outputStrokes()
-			print("Cleared")
+		do {
+			let view = self.toolbar
+			self.view.addSubview(view)
+			
+			do {
+				let button = self.resetButton
+				view.addSubview(button)
+			}
+			
+			do {
+				let button = self.submitButton
+				view.addSubview(button)
+			}
+			
 		}
 		
 	}
@@ -59,6 +102,18 @@ class RootViewController: UIViewController {
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
+	}
+	
+}
+
+extension RootViewController {
+	
+	private func resetStrokes() {
+		self.willDrawView.clearStrokes()
+	}
+	
+	private func outputStrokes() {
+		self.willDrawView.outputStrokes()
 	}
 	
 }
