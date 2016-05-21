@@ -17,9 +17,9 @@
 		790007841CF08039004C18C5 /* WILLCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007831CF08039004C18C5 /* WILLCore.framework */; };
 		790007861CF0804E004C18C5 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007851CF0804E004C18C5 /* libc++.tbd */; };
 		790007881CF08056004C18C5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007871CF08056004C18C5 /* libz.tbd */; };
-		7900078C1CF081AB004C18C5 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900078B1CF081AB004C18C5 /* DrawView.swift */; };
-		7900078E1CF09489004C18C5 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900078D1CF09489004C18C5 /* Stroke.swift */; };
 		790007901CF09BE2004C18C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900078F1CF09BE2004C18C5 /* Extensions.swift */; };
+		79330DD51CF0B8040081966F /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DD31CF0B8040081966F /* DrawView.swift */; };
+		79330DD61CF0B8040081966F /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DD41CF0B8040081966F /* Stroke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +57,9 @@
 		790007851CF0804E004C18C5 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		790007871CF08056004C18C5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		790007891CF08073004C18C5 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		7900078B1CF081AB004C18C5 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
-		7900078D1CF09489004C18C5 /* Stroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
 		7900078F1CF09BE2004C18C5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		79330DD31CF0B8040081966F /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		79330DD41CF0B8040081966F /* Stroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +96,7 @@
 				790007871CF08056004C18C5 /* libz.tbd */,
 				790007851CF0804E004C18C5 /* libc++.tbd */,
 				790007831CF08039004C18C5 /* WILLCore.framework */,
+				79330DD21CF0B8040081966F /* WILLClasses */,
 				790007541CF07F17004C18C5 /* Chaffee */,
 				790007691CF07F18004C18C5 /* ChaffeeTests */,
 				790007741CF07F18004C18C5 /* ChaffeeUITests */,
@@ -116,7 +117,6 @@
 		790007541CF07F17004C18C5 /* Chaffee */ = {
 			isa = PBXGroup;
 			children = (
-				7900078A1CF0819C004C18C5 /* WILLClasses */,
 				7900078F1CF09BE2004C18C5 /* Extensions.swift */,
 				790007551CF07F17004C18C5 /* AppDelegate.swift */,
 				790007571CF07F17004C18C5 /* ViewController.swift */,
@@ -147,11 +147,11 @@
 			path = ChaffeeUITests;
 			sourceTree = "<group>";
 		};
-		7900078A1CF0819C004C18C5 /* WILLClasses */ = {
+		79330DD21CF0B8040081966F /* WILLClasses */ = {
 			isa = PBXGroup;
 			children = (
-				7900078D1CF09489004C18C5 /* Stroke.swift */,
-				7900078B1CF081AB004C18C5 /* DrawView.swift */,
+				79330DD31CF0B8040081966F /* DrawView.swift */,
+				79330DD41CF0B8040081966F /* Stroke.swift */,
 			);
 			path = WILLClasses;
 			sourceTree = "<group>";
@@ -290,9 +290,9 @@
 			files = (
 				790007901CF09BE2004C18C5 /* Extensions.swift in Sources */,
 				790007581CF07F17004C18C5 /* ViewController.swift in Sources */,
+				79330DD61CF0B8040081966F /* Stroke.swift in Sources */,
+				79330DD51CF0B8040081966F /* DrawView.swift in Sources */,
 				790007561CF07F17004C18C5 /* AppDelegate.swift in Sources */,
-				7900078C1CF081AB004C18C5 /* DrawView.swift in Sources */,
-				7900078E1CF09489004C18C5 /* Stroke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
