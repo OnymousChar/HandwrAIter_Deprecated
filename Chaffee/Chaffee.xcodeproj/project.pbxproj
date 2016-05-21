@@ -14,6 +14,9 @@
 		790007601CF07F17004C18C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7900075E1CF07F17004C18C5 /* LaunchScreen.storyboard */; };
 		7900076B1CF07F18004C18C5 /* ChaffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900076A1CF07F18004C18C5 /* ChaffeeTests.swift */; };
 		790007761CF07F18004C18C5 /* ChaffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790007751CF07F18004C18C5 /* ChaffeeUITests.swift */; };
+		790007841CF08039004C18C5 /* WILLCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007831CF08039004C18C5 /* WILLCore.framework */; };
+		790007861CF0804E004C18C5 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007851CF0804E004C18C5 /* libc++.tbd */; };
+		790007881CF08056004C18C5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007871CF08056004C18C5 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,10 @@
 		790007711CF07F18004C18C5 /* ChaffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChaffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		790007751CF07F18004C18C5 /* ChaffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaffeeUITests.swift; sourceTree = "<group>"; };
 		790007771CF07F18004C18C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		790007831CF08039004C18C5 /* WILLCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WILLCore.framework; sourceTree = "<group>"; };
+		790007851CF0804E004C18C5 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		790007871CF08056004C18C5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		790007891CF08073004C18C5 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790007881CF08056004C18C5 /* libz.tbd in Frameworks */,
+				790007861CF0804E004C18C5 /* libc++.tbd in Frameworks */,
+				790007841CF08039004C18C5 /* WILLCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +87,9 @@
 		790007491CF07F17004C18C5 = {
 			isa = PBXGroup;
 			children = (
+				790007871CF08056004C18C5 /* libz.tbd */,
+				790007851CF0804E004C18C5 /* libc++.tbd */,
+				790007831CF08039004C18C5 /* WILLCore.framework */,
 				790007541CF07F17004C18C5 /* Chaffee */,
 				790007691CF07F18004C18C5 /* ChaffeeTests */,
 				790007741CF07F18004C18C5 /* ChaffeeUITests */,
@@ -99,6 +112,7 @@
 			children = (
 				790007551CF07F17004C18C5 /* AppDelegate.swift */,
 				790007571CF07F17004C18C5 /* ViewController.swift */,
+				790007891CF08073004C18C5 /* Bridging-Header.h */,
 				790007591CF07F17004C18C5 /* Main.storyboard */,
 				7900075C1CF07F17004C18C5 /* Assets.xcassets */,
 				7900075E1CF07F17004C18C5 /* LaunchScreen.storyboard */,
@@ -401,10 +415,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Chaffee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.Chaffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -412,10 +431,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Chaffee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.Chaffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +508,7 @@
 				7900077C1CF07F18004C18C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7900077D1CF07F18004C18C5 /* Build configuration list for PBXNativeTarget "ChaffeeTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +517,7 @@
 				7900077F1CF07F18004C18C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		790007801CF07F18004C18C5 /* Build configuration list for PBXNativeTarget "ChaffeeUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +526,7 @@
 				790007821CF07F18004C18C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
