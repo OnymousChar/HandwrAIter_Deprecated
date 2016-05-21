@@ -17,6 +17,7 @@
 		790007841CF08039004C18C5 /* WILLCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007831CF08039004C18C5 /* WILLCore.framework */; };
 		790007861CF0804E004C18C5 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007851CF0804E004C18C5 /* libc++.tbd */; };
 		790007881CF08056004C18C5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007871CF08056004C18C5 /* libz.tbd */; };
+		7900078C1CF081AB004C18C5 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900078B1CF081AB004C18C5 /* DrawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		790007851CF0804E004C18C5 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		790007871CF08056004C18C5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		790007891CF08073004C18C5 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		7900078B1CF081AB004C18C5 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		790007541CF07F17004C18C5 /* Chaffee */ = {
 			isa = PBXGroup;
 			children = (
+				7900078A1CF0819C004C18C5 /* WILLClasses */,
 				790007551CF07F17004C18C5 /* AppDelegate.swift */,
 				790007571CF07F17004C18C5 /* ViewController.swift */,
 				790007891CF08073004C18C5 /* Bridging-Header.h */,
@@ -137,6 +140,14 @@
 				790007771CF07F18004C18C5 /* Info.plist */,
 			);
 			path = ChaffeeUITests;
+			sourceTree = "<group>";
+		};
+		7900078A1CF0819C004C18C5 /* WILLClasses */ = {
+			isa = PBXGroup;
+			children = (
+				7900078B1CF081AB004C18C5 /* DrawView.swift */,
+			);
+			path = WILLClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 			files = (
 				790007581CF07F17004C18C5 /* ViewController.swift in Sources */,
 				790007561CF07F17004C18C5 /* AppDelegate.swift in Sources */,
+				7900078C1CF081AB004C18C5 /* DrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
