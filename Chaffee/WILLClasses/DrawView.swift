@@ -10,6 +10,10 @@ import UIKit
 
 class DrawView: UIView {
 	
+	override class func layerClass() -> AnyClass {
+		return CAEAGLLayer.self
+	}
+	
 	private var willContext: WCMRenderingContext!
 	private var viewLayer: WCMLayer!
 	private var strokesLayer: WCMLayer!
@@ -197,8 +201,16 @@ extension DrawView {
 
 extension DrawView {
 	
-	override class func layerClass() -> AnyClass {
-		return CAEAGLLayer.self
+	func outputStrokes() {
+		let output = self.strokes.map { (stroke) -> String in
+			return stroke.description
+		}.joinWithSeparator("\n")
+		print(output)
+	}
+	
+	func clearStrokes() {
+		self.strokes.removeAll()
+		self.redrawStrokes()
 	}
 	
 }
