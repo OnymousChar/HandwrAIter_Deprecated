@@ -23,9 +23,9 @@
 		79330DDC1CF0B9940081966F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DDB1CF0B9940081966F /* RootViewController.swift */; };
 		79330DDE1CF107AB0081966F /* CallbackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DDD1CF107AB0081966F /* CallbackButton.swift */; };
 		79330DE11CF12FC50081966F /* ServerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DE01CF12FC50081966F /* ServerSession.swift */; };
-		79330DEE1CF145270081966F /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DEB1CF145270081966F /* bg.png */; };
-		79330DEF1CF145270081966F /* input_btn01.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DEC1CF145270081966F /* input_btn01.png */; };
-		79330DF01CF145270081966F /* input_btn02.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DED1CF145270081966F /* input_btn02.png */; };
+		79330DF41CF14D330081966F /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF11CF14D330081966F /* bg@2x.png */; };
+		79330DF51CF14D330081966F /* input_btn01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF21CF14D330081966F /* input_btn01@2x.png */; };
+		79330DF61CF14D330081966F /* input_btn02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF31CF14D330081966F /* input_btn02@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +69,9 @@
 		79330DDB1CF0B9940081966F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		79330DDD1CF107AB0081966F /* CallbackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackButton.swift; sourceTree = "<group>"; };
 		79330DE01CF12FC50081966F /* ServerSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerSession.swift; sourceTree = "<group>"; };
-		79330DEB1CF145270081966F /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		79330DEC1CF145270081966F /* input_btn01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_btn01.png; sourceTree = "<group>"; };
-		79330DED1CF145270081966F /* input_btn02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_btn02.png; sourceTree = "<group>"; };
+		79330DF11CF14D330081966F /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
+		79330DF21CF14D330081966F /* input_btn01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_btn01@2x.png"; sourceTree = "<group>"; };
+		79330DF31CF14D330081966F /* input_btn02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_btn02@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,9 +207,9 @@
 		79330DEA1CF145270081966F /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				79330DEB1CF145270081966F /* bg.png */,
-				79330DEC1CF145270081966F /* input_btn01.png */,
-				79330DED1CF145270081966F /* input_btn02.png */,
+				79330DF11CF14D330081966F /* bg@2x.png */,
+				79330DF21CF14D330081966F /* input_btn01@2x.png */,
+				79330DF31CF14D330081966F /* input_btn02@2x.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -319,12 +319,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79330DEF1CF145270081966F /* input_btn01.png in Resources */,
+				79330DF61CF14D330081966F /* input_btn02@2x.png in Resources */,
 				790007601CF07F17004C18C5 /* LaunchScreen.storyboard in Resources */,
 				7900075D1CF07F17004C18C5 /* Assets.xcassets in Resources */,
-				79330DF01CF145270081966F /* input_btn02.png in Resources */,
-				79330DEE1CF145270081966F /* bg.png in Resources */,
 				7900075B1CF07F17004C18C5 /* Main.storyboard in Resources */,
+				79330DF41CF14D330081966F /* bg@2x.png in Resources */,
+				79330DF51CF14D330081966F /* input_btn01@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
