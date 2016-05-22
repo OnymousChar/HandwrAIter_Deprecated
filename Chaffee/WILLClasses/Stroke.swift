@@ -42,7 +42,7 @@ extension Stroke {
 		let pointsInfo = "\"points\":\(pointsObjectInfo.arrayInfoString)"
 		let strideInfo = "\"stride\":\(self.stride.description)"
 		let pathInfo = "\"path\":{\(pointsInfo),\(strideInfo)}"
-		let widthInfo = "\"width\":\(self.width.description)"
+		let widthInfo = "\"width\":\(self.width.jsonInfo)"
 		let colorObjectInfo = self.color.rgbaInfo
 		let colorInfo = "\"color\":\(colorObjectInfo)"
 		let tsInfo = "\"ts\":\(self.ts.description)"
@@ -62,7 +62,13 @@ private extension String {
 			return self
 		}
 		
-		let arrayContent = self.substringWithRange(Range(startIndex ..< endIndex))
+		var arrayContent = self.substringWithRange(Range(startIndex ..< endIndex))
+		while arrayContent.hasSuffix(" ") {
+			arrayContent.removeAtIndex(arrayContent.endIndex.predecessor())
+		}
+		if arrayContent.hasSuffix(",") {
+			arrayContent.removeAtIndex(arrayContent.endIndex.predecessor())
+		}
 		return "[\(arrayContent)]"
 	}
 	
@@ -84,6 +90,19 @@ private extension UIColor {
 		let intAlpha = 1
 		
 		return "{\"red\":\(hexRed), \"green\":\(hexGreen), \"blue\":\(hexBlue), \"alpha\":\(intAlpha)}"
+	}
+	
+}
+
+private extension Float {
+	
+	var jsonInfo: String {
+		if self.isNaN {
+			return "null"
+			
+		} else {
+			return self.description
+		}
 	}
 	
 }

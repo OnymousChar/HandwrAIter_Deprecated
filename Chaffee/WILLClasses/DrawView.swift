@@ -201,11 +201,12 @@ extension DrawView {
 
 extension DrawView {
 	
-	func outputStrokes() {
-		let output = self.strokes.map { (stroke) -> String in
+	func getStrokes() -> String {
+		let outputElements = self.strokes.map { (stroke) -> String in
 			return stroke.description
-		}.joinWithSeparator("\n")
-		print(output)
+		}.joinWithSeparator(",\n")
+		let output = "[\(outputElements)]"
+		return output
 	}
 	
 	func clearStrokes() {
