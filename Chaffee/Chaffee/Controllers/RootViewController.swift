@@ -10,63 +10,76 @@ import UIKit
 
 class RootViewController: UIViewController {
 	
+	private var inputStrings = "あいうえお"
+	
 	private lazy var session: ServerSession = {
 		let session = ServerSession()
 		return session
 	}()
 	
-	private lazy var titleLabel: UILabel = {
-		let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-		let labelFrame = CGRect(x: 0, y: statusBarHeight, width: self.view.frame.width, height: 30)
-		let label = UILabel(frame: labelFrame)
-		label.text = "「あ」を書いてください"
-		return label
-	}()
-	
-	private lazy var willDrawView: DrawView = {
-		let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-		let currentBounds = self.view.bounds
-		let squareLength = min(currentBounds.width, currentBounds.height)
-		let squareSize = CGSize(width: squareLength, height: squareLength)
-		let drawViewPosition = CGPoint(x: (currentBounds.width - squareLength) / 2, y: statusBarHeight + self.titleLabel.frame.height)
-		let drawViewFrame = CGRect(origin: drawViewPosition, size: squareSize)
-		let drawView = DrawView(frame: drawViewFrame)
-		
-		return drawView
-	}()
-	
-	private lazy var toolbar: UIView = {
-		let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-		let viewFrame = CGRect(x: 0, y: statusBarHeight + self.titleLabel.frame.height + self.willDrawView.frame.height, width: self.view.frame.width, height: 40)
-		let view = UIView(frame: viewFrame)
+	private lazy var background: UIImageView = {
+		let image = UIImage(named: "bg")!
+		let view = UIImageView(image: image)
+		view.frame.size = self.view.frame.size
 		return view
 	}()
 	
+	private lazy var instructionView: UIImageView = {
+		let image = UIImage(named: "input_top")
+		let view = UIImageView(image: image)
+		view.frame.origin = .zero
+		return view
+	}()
+	
+	private lazy var characterLabel: UILabel = {
+		let frame = CGRect(x: 0, y: 75, width: self.view.frame.width, height: 100)
+		let label = UILabel(frame: frame)
+		label.font = .systemFontOfSize(72)
+		label.textAlignment = .Center
+		return label
+	}()
+	
+	private lazy var drawViewWindowView: UIImageView = {
+		let image = UIImage(named: "input_window")
+		let view = UIImageView(image: image)
+		view.frame.origin = CGPoint(x: (self.view.frame.width - view.frame.width) / 2, y: 200)
+		return view
+	}()
+	
+	private lazy var willDrawView: DrawView = {
+		let drawView = DrawView(frame: self.drawViewWindowView.frame.createInsideRect(withMargin: 20))
+		drawView.backgroundColor = .clearColor()
+		return drawView
+	}()
+	
+	private lazy var submitButton: CallbackButton = {
+		let image = UIImage(named: "input_btn01")
+		let button = CallbackButton()
+		button.setImage(image, forState: .Normal)
+		button.frame.size = image?.size ?? .zero
+		button.center.x = self.view.frame.width / 2
+		button.frame.origin.y = 540
+		button.setOnTapAction {
+//			self.outputStrokes()
+			self.resetStrokes()
+			self.setNextCharacter()
+		}
+		return button
+	}()
+	
 	private lazy var resetButton: CallbackButton = {
-		let buttonSize = CGSize(width: self.toolbar.frame.width / 2, height: self.toolbar.frame.height)
-		let buttonOrigin = CGPoint.zero
-		let button = CallbackButton(frame: CGRect(origin: buttonOrigin, size: buttonSize))
-		button.setTitle("リセット", forState: .Normal)
-		button.setTitleColor(.blackColor(), forState: .Normal)
+		let image = UIImage(named: "input_btn02")
+		let button = CallbackButton()
+		button.setImage(image, forState: .Normal)
+		button.frame.size = image?.size ?? .zero
+		button.center.x = self.view.frame.width / 2
+		button.frame.origin.y = 620
 		button.setOnTapAction {
 			self.resetStrokes()
 		}
 		return button
 	}()
 	
-	private lazy var submitButton: CallbackButton = {
-		let buttonSize = CGSize(width: self.toolbar.frame.width / 2, height: self.toolbar.frame.height)
-		let buttonOrigin = CGPoint(x: self.toolbar.frame.width - buttonSize.width, y: 0)
-		let button = CallbackButton(frame: CGRect(origin: buttonOrigin, size: buttonSize))
-		button.setTitle("決定", forState: .Normal)
-		button.setTitleColor(.blackColor(), forState: .Normal)
-		button.setOnTapAction {
-			self.outputStrokes()
-			self.resetStrokes()
-		}
-		return button
-	}()
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -75,32 +88,41 @@ class RootViewController: UIViewController {
 		self.view.backgroundColor = .whiteColor()
 		
 		do {
-			let label = self.titleLabel
+			let background = self.background
+			self.view.addSubview(background)
+		}
+		
+		do {
+			let instruction = self.instructionView
+			self.view.addSubview(instruction)
+		}
+		
+		do {
+			let label = self.characterLabel
 			self.view.addSubview(label)
 		}
 		
 		do {
 			let view = self.willDrawView
-			view.layer.borderWidth = 1
-			view.layer.borderColor = UIColor.redColor().CGColor
 			self.view.addSubview(view)
 		}
 		
 		do {
-			let view = self.toolbar
+			let view = self.drawViewWindowView
 			self.view.addSubview(view)
-			
-			do {
-				let button = self.resetButton
-				view.addSubview(button)
-			}
-			
-			do {
-				let button = self.submitButton
-				view.addSubview(button)
-			}
-			
 		}
+		
+		do {
+			let button = self.resetButton
+			self.view.addSubview(button)
+		}
+		
+		do {
+			let button = self.submitButton
+			self.view.addSubview(button)
+		}
+		
+		self.setInstructionLabelText()
 		
 	}
 
@@ -119,9 +141,32 @@ extension RootViewController {
 	
 	private func outputStrokes() {
 		let strokes = self.willDrawView.getStrokes()
-		let text = "あ"
+		let text = self.inputStrings.first
 		let outputString = "{\"char\":\"\(text)\",\"data\":\(strokes)}"
 		self.session.postString(outputString)
+	}
+	
+	private func setInstructionLabelText() {
+		
+		guard let first = self.inputStrings.first else {
+			self.characterLabel.text = nil
+			return
+		}
+		
+		self.characterLabel.text = "[\(first)]"
+		
+	}
+	
+	private func setNextCharacter() {
+		guard !self.inputStrings.isEmpty else {
+			return
+		}
+		
+		self.inputStrings.removeAtIndex(self.inputStrings.startIndex)
+		self.resetStrokes()
+		
+		self.setInstructionLabelText()
+		
 	}
 	
 }

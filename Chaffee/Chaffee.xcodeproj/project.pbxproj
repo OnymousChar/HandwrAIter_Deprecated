@@ -26,6 +26,8 @@
 		79330DF41CF14D330081966F /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF11CF14D330081966F /* bg@2x.png */; };
 		79330DF51CF14D330081966F /* input_btn01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF21CF14D330081966F /* input_btn01@2x.png */; };
 		79330DF61CF14D330081966F /* input_btn02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF31CF14D330081966F /* input_btn02@2x.png */; };
+		79330DF91CF1569C0081966F /* input_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF71CF1569C0081966F /* input_top@2x.png */; };
+		79330DFA1CF1569C0081966F /* input_window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF81CF1569C0081966F /* input_window@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		79330DF11CF14D330081966F /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		79330DF21CF14D330081966F /* input_btn01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_btn01@2x.png"; sourceTree = "<group>"; };
 		79330DF31CF14D330081966F /* input_btn02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_btn02@2x.png"; sourceTree = "<group>"; };
+		79330DF71CF1569C0081966F /* input_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_top@2x.png"; sourceTree = "<group>"; };
+		79330DF81CF1569C0081966F /* input_window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_window@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 				79330DF11CF14D330081966F /* bg@2x.png */,
 				79330DF21CF14D330081966F /* input_btn01@2x.png */,
 				79330DF31CF14D330081966F /* input_btn02@2x.png */,
+				79330DF71CF1569C0081966F /* input_top@2x.png */,
+				79330DF81CF1569C0081966F /* input_window@2x.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -320,11 +326,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				79330DF61CF14D330081966F /* input_btn02@2x.png in Resources */,
+				79330DF91CF1569C0081966F /* input_top@2x.png in Resources */,
 				790007601CF07F17004C18C5 /* LaunchScreen.storyboard in Resources */,
 				7900075D1CF07F17004C18C5 /* Assets.xcassets in Resources */,
 				7900075B1CF07F17004C18C5 /* Main.storyboard in Resources */,
 				79330DF41CF14D330081966F /* bg@2x.png in Resources */,
 				79330DF51CF14D330081966F /* input_btn01@2x.png in Resources */,
+				79330DFA1CF1569C0081966F /* input_window@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
