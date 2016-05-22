@@ -131,7 +131,7 @@ extension DrawView {
 			
 			self.pathSmoothener.reset()
 			
-			self.strokeRenderer.color = UIColor(red: .createRandomValue(), green: .createRandomValue(), blue: .createRandomValue(), alpha:0.5)
+			self.strokeRenderer.color = UIColor(red: 0, green: 0, blue: 0, alpha:1)
 			self.strokeRenderer.resetAndClearBuffers()
 			
 		case .Moved:
@@ -201,17 +201,33 @@ extension DrawView {
 
 extension DrawView {
 	
-	func getStrokes() -> String {
-		let outputElements = self.strokes.map { (stroke) -> String in
-			return stroke.description
-		}.joinWithSeparator(",\n")
-		let output = "[\(outputElements)]"
-		return output
+//	func getStrokes() -> String {
+	func getStrokes() -> NSData {
+//		let outputElements = self.strokes.map { (stroke) -> String in
+//			return stroke.description
+//		}.joinWithSeparator(",\n")
+//		let output = "[\(outputElements)]"
+//		return output
+		let inkEncoder = WCMInkEncoder()
+		for s in self.strokes {
+			inkEncoder.encodePathWithPrecision(2, andPoints: s.points, andStride: UInt32(s.stride), andWidth: s.width, andColor: s.color, andTs: s.ts, andTf: s.tf, andBlendMode:s.blendMode)
+		}
+		let data = inkEncoder.getBytes()
+		return data
 	}
 	
 	func clearStrokes() {
 		self.strokes.removeAll()
 		self.redrawStrokes()
+	}
+	
+	func getImage() -> UIImage {
+		UIGraphicsBeginImageContext(CGSizeMake(self.frame.size.width, self.frame.size.height));
+		self.drawViewHierarchyInRect(CGRectMake(0, 0, self.frame.size.width, self.frame.size.height), afterScreenUpdates: true)
+		let image = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		
+		return image;
 	}
 	
 }

@@ -10,5 +10,6 @@
 #define Bridging_Header_h
 
 #import "WILLCore/WILLCore.h"
+#import "TesseractOCR/TesseractOCR.h"
 
 #endif /* Bridging_Header_h */
