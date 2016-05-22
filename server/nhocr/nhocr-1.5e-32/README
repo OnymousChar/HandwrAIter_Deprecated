@@ -1,0 +1,26 @@
+This package contains rec_line program, which is a part
+of NHocr - the Japanese OCR, for SUSE Linux i686.
+
+rec_line reads PBM/PGM/PPM image file(s), recognizes the text
+line image for each file, and produces text data in EUC-JP.
+Each file should contain only ONE horizontal text line image
+without any surrounding dirt.
+
+Running rec_line without any argument will show the usage.
+
+
+Installation:
+
+1. Copy PLM.dic into /opt/nhocr/lib
+
+2. Copy rec_line into /opt/nhocr/bin or wherever you like.
+
+If the location of PLM.dic is different, the environment
+variable NHOCR_LIBDIR must be set to point to the library
+directory.
+
+For details:
+  http://code.google.com/p/nhocr/
+  http://sourceforge.jp/projects/nhocr/
+--
+Dec 31, 2008  Hideaki Goto

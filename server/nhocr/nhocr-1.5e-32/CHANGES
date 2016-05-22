@@ -1,0 +1,35 @@
+nhocr-1.5e-32-i686-linux.tar.gz : (Dec. 31, 2008)
+
+  * A feature of reading multiple input files is supported on
+    rec_line.  This feature is useful for improving the system
+    performance by avoiding multiple OCR initializations.
+
+  * Some code refinements for forthcoming source code release.
+
+
+nhocr-1.4e-32-i686-linux.tar.gz : (Oct. 5, 2008)
+
+  * An ad-hoc tune has been made in character segmentation 
+    to improve performance with some horizontally split Japanese
+    characters.
+
+  * An ad-hoc Wide/ASCII detection mechanism has been introduced.
+
+
+nhocr-1.3e-36-i686-linux.tar.gz : (Sep. 26, 2008)
+
+  * rec_line does not print output text on the screen now.
+    A new option "-o -" will enable that.
+
+  * Automatic foreground/background detector and image
+    inverter have been added.
+
+  * A quick and dirty script of NHocr-OCRopus(0.2) bridge.
+
+  * A minor enhancement for reducing noisy output.
+
+
+nhocr-1.2e-37-i686-linux.tar.gz : (Sep. 15, 2008)
+
+  * The initial Linux i686 binary distribution of NHocr.
+
