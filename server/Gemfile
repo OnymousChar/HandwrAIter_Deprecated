@@ -1,0 +1,9 @@
+# A sample Gemfile
+source "https://rubygems.org"
+
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'sinatra-cross_origin'
+gem 'json'
+gem 'mongo'
+gem 'bson_ext'
