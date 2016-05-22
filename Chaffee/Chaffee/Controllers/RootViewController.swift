@@ -10,6 +10,11 @@ import UIKit
 
 class RootViewController: UIViewController {
 	
+	private lazy var session: ServerSession = {
+		let session = ServerSession()
+		return session
+	}()
+	
 	private lazy var titleLabel: UILabel = {
 		let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
 		let labelFrame = CGRect(x: 0, y: statusBarHeight, width: self.view.frame.width, height: 30)
@@ -113,7 +118,10 @@ extension RootViewController {
 	}
 	
 	private func outputStrokes() {
-		self.willDrawView.outputStrokes()
+		let strokes = self.willDrawView.getStrokes()
+		let text = "あ"
+		let outputString = "{\"char\":\"\(text)\",\"data\":\(strokes)}"
+		self.session.postString(outputString)
 	}
 	
 }
