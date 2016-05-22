@@ -15,7 +15,7 @@ class ServerSession: NSObject {
 	
 	override init() {
 		
-		let urlString = "http://52.193.93.208:4567/add"
+		let urlString = "http://52.193.93.208:9292/add"
 		let url = NSURL(string: urlString)!
 		let session = NSURLSession(configuration: .defaultSessionConfiguration())
 		let request = NSMutableURLRequest(URL: url, cachePolicy: .ReloadIgnoringLocalCacheData, timeoutInterval: 30)

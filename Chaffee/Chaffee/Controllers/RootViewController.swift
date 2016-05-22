@@ -10,11 +10,16 @@ import UIKit
 
 class RootViewController: UIViewController {
 	
-	private var inputStrings = "あいうえお"
-	
 	private lazy var session: ServerSession = {
 		let session = ServerSession()
 		return session
+	}()
+	
+	private lazy var recognizer: G8Tesseract = {
+		let recognizer = G8Tesseract(language: "eng")
+		recognizer.pageSegmentationMode = .SingleChar
+		
+		return recognizer
 	}()
 	
 	private lazy var background: UIImageView = {
@@ -29,14 +34,6 @@ class RootViewController: UIViewController {
 		let view = UIImageView(image: image)
 		view.frame.origin = .zero
 		return view
-	}()
-	
-	private lazy var characterLabel: UILabel = {
-		let frame = CGRect(x: 0, y: 75, width: self.view.frame.width, height: 100)
-		let label = UILabel(frame: frame)
-		label.font = .systemFontOfSize(72)
-		label.textAlignment = .Center
-		return label
 	}()
 	
 	private lazy var drawViewWindowView: UIImageView = {
@@ -60,9 +57,10 @@ class RootViewController: UIViewController {
 		button.center.x = self.view.frame.width / 2
 		button.frame.origin.y = 540
 		button.setOnTapAction {
-//			self.outputStrokes()
+			self.outputStrokes()
+//			self.recognizeText()
 			self.resetStrokes()
-			self.setNextCharacter()
+//			self.setNextCharacter()
 		}
 		return button
 	}()
@@ -93,12 +91,7 @@ class RootViewController: UIViewController {
 		}
 		
 		do {
-			let instruction = self.instructionView
-			self.view.addSubview(instruction)
-		}
-		
-		do {
-			let label = self.characterLabel
+			let label = self.instructionView
 			self.view.addSubview(label)
 		}
 		
@@ -122,8 +115,6 @@ class RootViewController: UIViewController {
 			self.view.addSubview(button)
 		}
 		
-		self.setInstructionLabelText()
-		
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -140,33 +131,18 @@ extension RootViewController {
 	}
 	
 	private func outputStrokes() {
+		let text = self.getRecognizeText()
 		let strokes = self.willDrawView.getStrokes()
-		let text = self.inputStrings.first
 		let outputString = "{\"char\":\"\(text)\",\"data\":\(strokes)}"
 		self.session.postString(outputString)
 	}
 	
-	private func setInstructionLabelText() {
-		
-		guard let first = self.inputStrings.first else {
-			self.characterLabel.text = nil
-			return
-		}
-		
-		self.characterLabel.text = "[\(first)]"
-		
-	}
-	
-	private func setNextCharacter() {
-		guard !self.inputStrings.isEmpty else {
-			return
-		}
-		
-		self.inputStrings.removeAtIndex(self.inputStrings.startIndex)
-		self.resetStrokes()
-		
-		self.setInstructionLabelText()
-		
+	private func getRecognizeText() -> String {
+		let currentImage = self.willDrawView.getImage()
+		self.recognizer.image = currentImage
+		self.recognizer.recognize()
+		print(self.recognizer.recognizedText)
+		return self.recognizer.recognizedText
 	}
 	
 }

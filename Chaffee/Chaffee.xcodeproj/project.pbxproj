@@ -28,6 +28,9 @@
 		79330DF61CF14D330081966F /* input_btn02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF31CF14D330081966F /* input_btn02@2x.png */; };
 		79330DF91CF1569C0081966F /* input_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF71CF1569C0081966F /* input_top@2x.png */; };
 		79330DFA1CF1569C0081966F /* input_window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF81CF1569C0081966F /* input_window@2x.png */; };
+		79330E051CF166430081966F /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79330E021CF1650B0081966F /* TesseractOCR.framework */; };
+		79330E061CF166430081966F /* TesseractOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79330E021CF1650B0081966F /* TesseractOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79330E0D1CF170870081966F /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 79330E0C1CF170870081966F /* tessdata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,35 @@
 			remoteGlobalIDString = 790007511CF07F17004C18C5;
 			remoteInfo = Chaffee;
 		};
+		79330E011CF1650B0081966F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79330DFD1CF1650B0081966F /* Tesseract OCR iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 73C0A7BA1A5955E200D823D4;
+			remoteInfo = TesseractOCR;
+		};
+		79330E071CF166430081966F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79330DFD1CF1650B0081966F /* Tesseract OCR iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 73C0A77B1A592C2B00D823D4;
+			remoteInfo = TesseractOCR;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		79330E091CF166430081966F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				79330E061CF166430081966F /* TesseractOCR.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		790007521CF07F17004C18C5 /* Chaffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chaffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +107,8 @@
 		79330DF31CF14D330081966F /* input_btn02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_btn02@2x.png"; sourceTree = "<group>"; };
 		79330DF71CF1569C0081966F /* input_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_top@2x.png"; sourceTree = "<group>"; };
 		79330DF81CF1569C0081966F /* input_window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_window@2x.png"; sourceTree = "<group>"; };
+		79330DFD1CF1650B0081966F /* Tesseract OCR iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Tesseract OCR iOS.xcodeproj"; path = "Tesseract-OCR-iOS-master/Tesseract OCR iOS.xcodeproj"; sourceTree = "<group>"; };
+		79330E0C1CF170870081966F /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "Tesseract-OCR-iOS-master/tessdata"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79330E051CF166430081966F /* TesseractOCR.framework in Frameworks */,
 				790007881CF08056004C18C5 /* libz.tbd in Frameworks */,
 				790007861CF0804E004C18C5 /* libc++.tbd in Frameworks */,
 				790007841CF08039004C18C5 /* WILLCore.framework in Frameworks */,
@@ -112,6 +146,7 @@
 				790007871CF08056004C18C5 /* libz.tbd */,
 				790007851CF0804E004C18C5 /* libc++.tbd */,
 				790007831CF08039004C18C5 /* WILLCore.framework */,
+				79330DFD1CF1650B0081966F /* Tesseract OCR iOS.xcodeproj */,
 				79330DD21CF0B8040081966F /* WILLClasses */,
 				790007541CF07F17004C18C5 /* Chaffee */,
 				790007691CF07F18004C18C5 /* ChaffeeTests */,
@@ -144,6 +179,7 @@
 				7900075C1CF07F17004C18C5 /* Assets.xcassets */,
 				7900075E1CF07F17004C18C5 /* LaunchScreen.storyboard */,
 				790007611CF07F17004C18C5 /* Info.plist */,
+				79330E0C1CF170870081966F /* tessdata */,
 			);
 			path = Chaffee;
 			sourceTree = "<group>";
@@ -220,6 +256,14 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		79330DFE1CF1650B0081966F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79330E021CF1650B0081966F /* TesseractOCR.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,10 +274,12 @@
 				7900074E1CF07F17004C18C5 /* Sources */,
 				7900074F1CF07F17004C18C5 /* Frameworks */,
 				790007501CF07F17004C18C5 /* Resources */,
+				79330E091CF166430081966F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				79330E081CF166430081966F /* PBXTargetDependency */,
 			);
 			name = Chaffee;
 			productName = Chaffee;
@@ -311,6 +357,12 @@
 			mainGroup = 790007491CF07F17004C18C5;
 			productRefGroup = 790007531CF07F17004C18C5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 79330DFE1CF1650B0081966F /* Products */;
+					ProjectRef = 79330DFD1CF1650B0081966F /* Tesseract OCR iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				790007511CF07F17004C18C5 /* Chaffee */,
@@ -320,6 +372,16 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		79330E021CF1650B0081966F /* TesseractOCR.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TesseractOCR.framework;
+			remoteRef = 79330E011CF1650B0081966F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		790007501CF07F17004C18C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -327,6 +389,7 @@
 			files = (
 				79330DF61CF14D330081966F /* input_btn02@2x.png in Resources */,
 				79330DF91CF1569C0081966F /* input_top@2x.png in Resources */,
+				79330E0D1CF170870081966F /* tessdata in Resources */,
 				790007601CF07F17004C18C5 /* LaunchScreen.storyboard in Resources */,
 				7900075D1CF07F17004C18C5 /* Assets.xcassets in Resources */,
 				7900075B1CF07F17004C18C5 /* Main.storyboard in Resources */,
@@ -396,6 +459,11 @@
 			isa = PBXTargetDependency;
 			target = 790007511CF07F17004C18C5 /* Chaffee */;
 			targetProxy = 790007721CF07F18004C18C5 /* PBXContainerItemProxy */;
+		};
+		79330E081CF166430081966F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TesseractOCR;
+			targetProxy = 79330E071CF166430081966F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
