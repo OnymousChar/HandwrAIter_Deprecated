@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		790007561CF07F17004C18C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790007551CF07F17004C18C5 /* AppDelegate.swift */; };
+		790007581CF07F17004C18C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790007571CF07F17004C18C5 /* ViewController.swift */; };
+		7900075B1CF07F17004C18C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790007591CF07F17004C18C5 /* Main.storyboard */; };
+		7900075D1CF07F17004C18C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7900075C1CF07F17004C18C5 /* Assets.xcassets */; };
+		790007601CF07F17004C18C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7900075E1CF07F17004C18C5 /* LaunchScreen.storyboard */; };
+		7900076B1CF07F18004C18C5 /* ChaffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900076A1CF07F18004C18C5 /* ChaffeeTests.swift */; };
+		790007761CF07F18004C18C5 /* ChaffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790007751CF07F18004C18C5 /* ChaffeeUITests.swift */; };
+		790007841CF08039004C18C5 /* WILLCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007831CF08039004C18C5 /* WILLCore.framework */; };
+		790007861CF0804E004C18C5 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007851CF0804E004C18C5 /* libc++.tbd */; };
+		790007881CF08056004C18C5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 790007871CF08056004C18C5 /* libz.tbd */; };
+		79330DD51CF0B8040081966F /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DD31CF0B8040081966F /* DrawView.swift */; };
+		79330DD61CF0B8040081966F /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DD41CF0B8040081966F /* Stroke.swift */; };
+		79330DDA1CF0B9740081966F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DD91CF0B9740081966F /* Extensions.swift */; };
+		79330DDC1CF0B9940081966F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DDB1CF0B9940081966F /* RootViewController.swift */; };
+		79330DDE1CF107AB0081966F /* CallbackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DDD1CF107AB0081966F /* CallbackButton.swift */; };
+		79330DE11CF12FC50081966F /* ServerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330DE01CF12FC50081966F /* ServerSession.swift */; };
+		79330DF41CF14D330081966F /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF11CF14D330081966F /* bg@2x.png */; };
+		79330DF51CF14D330081966F /* input_btn01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF21CF14D330081966F /* input_btn01@2x.png */; };
+		79330DF61CF14D330081966F /* input_btn02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF31CF14D330081966F /* input_btn02@2x.png */; };
+		79330DF91CF1569C0081966F /* input_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF71CF1569C0081966F /* input_top@2x.png */; };
+		79330DFA1CF1569C0081966F /* input_window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79330DF81CF1569C0081966F /* input_window@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		790007671CF07F18004C18C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7900074A1CF07F17004C18C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 790007511CF07F17004C18C5;
+			remoteInfo = Chaffee;
+		};
+		790007721CF07F18004C18C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7900074A1CF07F17004C18C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 790007511CF07F17004C18C5;
+			remoteInfo = Chaffee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		790007521CF07F17004C18C5 /* Chaffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chaffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		790007551CF07F17004C18C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		790007571CF07F17004C18C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7900075A1CF07F17004C18C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7900075C1CF07F17004C18C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7900075F1CF07F17004C18C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		790007611CF07F17004C18C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		790007661CF07F18004C18C5 /* ChaffeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChaffeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7900076A1CF07F18004C18C5 /* ChaffeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaffeeTests.swift; sourceTree = "<group>"; };
+		7900076C1CF07F18004C18C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		790007711CF07F18004C18C5 /* ChaffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChaffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		790007751CF07F18004C18C5 /* ChaffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaffeeUITests.swift; sourceTree = "<group>"; };
+		790007771CF07F18004C18C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		790007831CF08039004C18C5 /* WILLCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WILLCore.framework; sourceTree = "<group>"; };
+		790007851CF0804E004C18C5 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		790007871CF08056004C18C5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		790007891CF08073004C18C5 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		79330DD31CF0B8040081966F /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		79330DD41CF0B8040081966F /* Stroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		79330DD91CF0B9740081966F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		79330DDB1CF0B9940081966F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		79330DDD1CF107AB0081966F /* CallbackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackButton.swift; sourceTree = "<group>"; };
+		79330DE01CF12FC50081966F /* ServerSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerSession.swift; sourceTree = "<group>"; };
+		79330DF11CF14D330081966F /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
+		79330DF21CF14D330081966F /* input_btn01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_btn01@2x.png"; sourceTree = "<group>"; };
+		79330DF31CF14D330081966F /* input_btn02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_btn02@2x.png"; sourceTree = "<group>"; };
+		79330DF71CF1569C0081966F /* input_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_top@2x.png"; sourceTree = "<group>"; };
+		79330DF81CF1569C0081966F /* input_window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input_window@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7900074F1CF07F17004C18C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				790007881CF08056004C18C5 /* libz.tbd in Frameworks */,
+				790007861CF0804E004C18C5 /* libc++.tbd in Frameworks */,
+				790007841CF08039004C18C5 /* WILLCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790007631CF07F18004C18C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7900076E1CF07F18004C18C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		790007491CF07F17004C18C5 = {
+			isa = PBXGroup;
+			children = (
+				790007871CF08056004C18C5 /* libz.tbd */,
+				790007851CF0804E004C18C5 /* libc++.tbd */,
+				790007831CF08039004C18C5 /* WILLCore.framework */,
+				79330DD21CF0B8040081966F /* WILLClasses */,
+				790007541CF07F17004C18C5 /* Chaffee */,
+				790007691CF07F18004C18C5 /* ChaffeeTests */,
+				790007741CF07F18004C18C5 /* ChaffeeUITests */,
+				790007531CF07F17004C18C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		790007531CF07F17004C18C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				790007521CF07F17004C18C5 /* Chaffee.app */,
+				790007661CF07F18004C18C5 /* ChaffeeTests.xctest */,
+				790007711CF07F18004C18C5 /* ChaffeeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		790007541CF07F17004C18C5 /* Chaffee */ = {
+			isa = PBXGroup;
+			children = (
+				79330DD81CF0B8B10081966F /* Foundations */,
+				79330DD71CF0B8920081966F /* Controllers */,
+				79330DDF1CF12F9F0081966F /* Models */,
+				79330DE91CF145270081966F /* Resource */,
+				790007551CF07F17004C18C5 /* AppDelegate.swift */,
+				790007571CF07F17004C18C5 /* ViewController.swift */,
+				790007891CF08073004C18C5 /* Bridging-Header.h */,
+				790007591CF07F17004C18C5 /* Main.storyboard */,
+				7900075C1CF07F17004C18C5 /* Assets.xcassets */,
+				7900075E1CF07F17004C18C5 /* LaunchScreen.storyboard */,
+				790007611CF07F17004C18C5 /* Info.plist */,
+			);
+			path = Chaffee;
+			sourceTree = "<group>";
+		};
+		790007691CF07F18004C18C5 /* ChaffeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				7900076A1CF07F18004C18C5 /* ChaffeeTests.swift */,
+				7900076C1CF07F18004C18C5 /* Info.plist */,
+			);
+			path = ChaffeeTests;
+			sourceTree = "<group>";
+		};
+		790007741CF07F18004C18C5 /* ChaffeeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				790007751CF07F18004C18C5 /* ChaffeeUITests.swift */,
+				790007771CF07F18004C18C5 /* Info.plist */,
+			);
+			path = ChaffeeUITests;
+			sourceTree = "<group>";
+		};
+		79330DD21CF0B8040081966F /* WILLClasses */ = {
+			isa = PBXGroup;
+			children = (
+				79330DD41CF0B8040081966F /* Stroke.swift */,
+				79330DD31CF0B8040081966F /* DrawView.swift */,
+			);
+			path = WILLClasses;
+			sourceTree = "<group>";
+		};
+		79330DD71CF0B8920081966F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				79330DDB1CF0B9940081966F /* RootViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		79330DD81CF0B8B10081966F /* Foundations */ = {
+			isa = PBXGroup;
+			children = (
+				79330DD91CF0B9740081966F /* Extensions.swift */,
+				79330DDD1CF107AB0081966F /* CallbackButton.swift */,
+			);
+			path = Foundations;
+			sourceTree = "<group>";
+		};
+		79330DDF1CF12F9F0081966F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79330DE01CF12FC50081966F /* ServerSession.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79330DE91CF145270081966F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				79330DEA1CF145270081966F /* Image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		79330DEA1CF145270081966F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				79330DF11CF14D330081966F /* bg@2x.png */,
+				79330DF21CF14D330081966F /* input_btn01@2x.png */,
+				79330DF31CF14D330081966F /* input_btn02@2x.png */,
+				79330DF71CF1569C0081966F /* input_top@2x.png */,
+				79330DF81CF1569C0081966F /* input_window@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		790007511CF07F17004C18C5 /* Chaffee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7900077A1CF07F18004C18C5 /* Build configuration list for PBXNativeTarget "Chaffee" */;
+			buildPhases = (
+				7900074E1CF07F17004C18C5 /* Sources */,
+				7900074F1CF07F17004C18C5 /* Frameworks */,
+				790007501CF07F17004C18C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chaffee;
+			productName = Chaffee;
+			productReference = 790007521CF07F17004C18C5 /* Chaffee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		790007651CF07F18004C18C5 /* ChaffeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7900077D1CF07F18004C18C5 /* Build configuration list for PBXNativeTarget "ChaffeeTests" */;
+			buildPhases = (
+				790007621CF07F18004C18C5 /* Sources */,
+				790007631CF07F18004C18C5 /* Frameworks */,
+				790007641CF07F18004C18C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				790007681CF07F18004C18C5 /* PBXTargetDependency */,
+			);
+			name = ChaffeeTests;
+			productName = ChaffeeTests;
+			productReference = 790007661CF07F18004C18C5 /* ChaffeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		790007701CF07F18004C18C5 /* ChaffeeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 790007801CF07F18004C18C5 /* Build configuration list for PBXNativeTarget "ChaffeeUITests" */;
+			buildPhases = (
+				7900076D1CF07F18004C18C5 /* Sources */,
+				7900076E1CF07F18004C18C5 /* Frameworks */,
+				7900076F1CF07F18004C18C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				790007731CF07F18004C18C5 /* PBXTargetDependency */,
+			);
+			name = ChaffeeUITests;
+			productName = ChaffeeUITests;
+			productReference = 790007711CF07F18004C18C5 /* ChaffeeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7900074A1CF07F17004C18C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Crazism;
+				TargetAttributes = {
+					790007511CF07F17004C18C5 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = KC8N9BMQJY;
+					};
+					790007651CF07F18004C18C5 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 790007511CF07F17004C18C5;
+					};
+					790007701CF07F18004C18C5 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 790007511CF07F17004C18C5;
+					};
+				};
+			};
+			buildConfigurationList = 7900074D1CF07F17004C18C5 /* Build configuration list for PBXProject "Chaffee" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 790007491CF07F17004C18C5;
+			productRefGroup = 790007531CF07F17004C18C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				790007511CF07F17004C18C5 /* Chaffee */,
+				790007651CF07F18004C18C5 /* ChaffeeTests */,
+				790007701CF07F18004C18C5 /* ChaffeeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		790007501CF07F17004C18C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79330DF61CF14D330081966F /* input_btn02@2x.png in Resources */,
+				79330DF91CF1569C0081966F /* input_top@2x.png in Resources */,
+				790007601CF07F17004C18C5 /* LaunchScreen.storyboard in Resources */,
+				7900075D1CF07F17004C18C5 /* Assets.xcassets in Resources */,
+				7900075B1CF07F17004C18C5 /* Main.storyboard in Resources */,
+				79330DF41CF14D330081966F /* bg@2x.png in Resources */,
+				79330DF51CF14D330081966F /* input_btn01@2x.png in Resources */,
+				79330DFA1CF1569C0081966F /* input_window@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790007641CF07F18004C18C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7900076F1CF07F18004C18C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7900074E1CF07F17004C18C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79330DDA1CF0B9740081966F /* Extensions.swift in Sources */,
+				79330DE11CF12FC50081966F /* ServerSession.swift in Sources */,
+				790007581CF07F17004C18C5 /* ViewController.swift in Sources */,
+				79330DDC1CF0B9940081966F /* RootViewController.swift in Sources */,
+				79330DDE1CF107AB0081966F /* CallbackButton.swift in Sources */,
+				79330DD61CF0B8040081966F /* Stroke.swift in Sources */,
+				79330DD51CF0B8040081966F /* DrawView.swift in Sources */,
+				790007561CF07F17004C18C5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		790007621CF07F18004C18C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7900076B1CF07F18004C18C5 /* ChaffeeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7900076D1CF07F18004C18C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				790007761CF07F18004C18C5 /* ChaffeeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		790007681CF07F18004C18C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 790007511CF07F17004C18C5 /* Chaffee */;
+			targetProxy = 790007671CF07F18004C18C5 /* PBXContainerItemProxy */;
+		};
+		790007731CF07F18004C18C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 790007511CF07F17004C18C5 /* Chaffee */;
+			targetProxy = 790007721CF07F18004C18C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		790007591CF07F17004C18C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7900075A1CF07F17004C18C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7900075E1CF07F17004C18C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7900075F1CF07F17004C18C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		790007781CF07F18004C18C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		790007791CF07F18004C18C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7900077B1CF07F18004C18C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Chaffee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.Chaffee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7900077C1CF07F18004C18C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Chaffee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.Chaffee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		7900077E1CF07F18004C18C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChaffeeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.ChaffeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chaffee.app/Chaffee";
+			};
+			name = Debug;
+		};
+		7900077F1CF07F18004C18C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChaffeeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.ChaffeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chaffee.app/Chaffee";
+			};
+			name = Release;
+		};
+		790007811CF07F18004C18C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChaffeeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.ChaffeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Chaffee;
+			};
+			name = Debug;
+		};
+		790007821CF07F18004C18C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChaffeeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.ChaffeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Chaffee;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7900074D1CF07F17004C18C5 /* Build configuration list for PBXProject "Chaffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				790007781CF07F18004C18C5 /* Debug */,
+				790007791CF07F18004C18C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7900077A1CF07F18004C18C5 /* Build configuration list for PBXNativeTarget "Chaffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7900077B1CF07F18004C18C5 /* Debug */,
+				7900077C1CF07F18004C18C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7900077D1CF07F18004C18C5 /* Build configuration list for PBXNativeTarget "ChaffeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7900077E1CF07F18004C18C5 /* Debug */,
+				7900077F1CF07F18004C18C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		790007801CF07F18004C18C5 /* Build configuration list for PBXNativeTarget "ChaffeeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				790007811CF07F18004C18C5 /* Debug */,
+				790007821CF07F18004C18C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7900074A1CF07F17004C18C5 /* Project object */;
+}
